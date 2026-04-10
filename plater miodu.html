@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Freelance Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, sans-serif;
+}
+
+body{
+  background:#05070a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ===== HONEYCOMB BACKGROUND ===== */
+.honeycomb{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  opacity:0.25;
+  pointer-events:none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='92' viewBox='0 0 80 92'%3E%3Cg fill='none' stroke='%2300ff88' stroke-opacity='0.25'%3E%3Cpolygon points='40,2 78,23 78,69 40,90 2,69 2,23'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-size:100px 115px;
+  animation: moveGrid 25s linear infinite;
+}
+
+@keyframes moveGrid{
+  from { transform: translateY(0px); }
+  to { transform: translateY(120px); }
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:120px 10%;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+.hero h1{
+  font-size:52px;
+  background:linear-gradient(90deg,#00ff88,#00ffaa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:15px;
+  color:#aaa;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* BUTTON */
+.btn{
+  margin-top:25px;
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00ff88,#00ffaa);
+  color:black;
+  font-weight:800;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(0,255,136,0.3);
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  padding:60px 10%;
+  position:relative;
+  z-index:1;
+}
+
+.stat{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(0,255,140,0.2);
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.stat h2{
+  color:#00ff88;
+  font-size:32px;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 10%;
+  position:relative;
+  z-index:1;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(0,255,140,0.15);
+  padding:20px;
+  border-radius:16px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#00ff88;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:100px 10%;
+  position:relative;
+  z-index:1;
+}
+
+.cta h2{
+  font-size:36px;
+  color:#00ff88;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#555;
+  position:relative;
+  z-index:1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="honeycomb"></div>
+
+<section class="hero">
+  <h1>Tworzę strony, które sprzedają</h1>
+  <p>
+    Pomagam firmom zdobywać klientów dzięki nowoczesnym stronom internetowym
+    w stylu premium SaaS / Apple / startup.
+  </p>
+
+  <a class="btn" href="#contact">Zamów stronę</a>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h2>10+</h2>
+    <p>Projektów</p>
+  </div>
+
+  <div class="stat">
+    <h2>48h</h2>
+    <p>Realizacja</p>
+  </div>
+
+  <div class="stat">
+    <h2>100%</h2>
+    <p>Responsywne</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="color:#00ff88;">Co robię</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>Strony, które sprzedają produkt lub usługę.</p>
+    </div>
+
+    <div class="card">
+      <h3>Strony firmowe</h3>
+      <p>Profesjonalny wizerunek firmy.</p>
+    </div>
+
+    <div class="card">
+      <h3>UI / SaaS</h3>
+      <p>Nowoczesne aplikacje webowe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="color:#00ff88;">Projekty</h2>
+
+  <div class="cards">
+    <div class="card">Ultra Landing Page</div>
+    <div class="card">Ultra To-Do App</div>
+    <div class="card">Portfolio PRO MAX</div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Chcesz stronę?</h2>
+  <p style="color:#aaa; margin-top:10px;">
+    Napisz do mnie — odpowiadam szybko ⚡
+  </p>
+
+  <a class="btn" href="mailto:projectwebzgorzelec@gmail.com">
+    projectwebzgorzelec@gmail.com
+  </a>
+</section>
+
+<footer>
+  © 2026 Freelance Dev
+</footer>
+
+</body>
+</html>
